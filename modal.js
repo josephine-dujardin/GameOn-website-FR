@@ -31,6 +31,7 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
+// Display values ​​in console
 function checkAll()
 {
   var lastName = document.getElementById("last").value;
@@ -46,8 +47,8 @@ function checkAll()
   displayCheckbox1Value();
   displayCheckbox2Value();
 
-  if(birthDate && firstName && lastName && email && quantity && city && checkbox1 || checkbox2){
-    dataArray = ['First Name : '+firstName,'Last Name : '+lastName,'Email : '+email,'Birthdate : '+birthDate,'Nombres de tournois : '+quantity,'City : '+city,'Coché : '+checkbox1,'Coché : '+checkbox2];
+  if(birthDate && firstName && lastName && email && quantity && city && checkbox1){
+    dataArray = ['Prénom : '+firstName,'Nom : '+lastName,'Email : '+email,'Date de naissance : '+birthDate,'Nombres de tournois : '+quantity,'Ville : '+city,'Coché : '+checkbox1,'Coché : '+checkbox2];
     console.log(dataArray);
   } else 
   {
@@ -140,6 +141,7 @@ function checkButton() {
   return true;   
 }  
 
+// Display radio value
 function displayRadioValue() {
   var ele = document.getElementsByName('location');
     
@@ -150,6 +152,7 @@ function displayRadioValue() {
 
 }
 
+// Display checkbox1 value
 function displayCheckbox1Value() {
   var ele = document.getElementsByName('checkbox1');
     
@@ -163,6 +166,7 @@ function displayCheckbox1Value() {
 
 }
 
+// Display checkbox2 value
 function displayCheckbox2Value() {
   var ele = document.getElementsByName('checkbox2');
     
