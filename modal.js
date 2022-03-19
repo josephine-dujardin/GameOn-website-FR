@@ -31,6 +31,31 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
+function checkAll()
+{
+  var lastName = document.getElementById("last").value;
+  var firstName = document.getElementById('first').value;
+  var email = document.getElementById('email').value
+  var quantity = document.getElementById('quantity').value
+  var checkbox1 = displayCheckbox1Value();
+  var checkbox2 = displayCheckbox2Value();
+  var birthDate = myValidator();
+  var city = displayRadioValue();
+  myValidator();
+  displayRadioValue();
+  displayCheckbox1Value();
+  displayCheckbox2Value();
+
+  if(birthDate && firstName && lastName && email && quantity && city && checkbox1 || checkbox2){
+    dataArray = ['First Name : '+firstName,'Last Name : '+lastName,'Email : '+email,'Birthdate : '+birthDate,'Nombres de tournois : '+quantity,'City : '+city,'Coché : '+checkbox1,'Coché : '+checkbox2];
+    console.log(dataArray);
+  } else 
+  {
+    console.log('fields to fill');
+  }
+  
+}
+
 // Form validation
 var inputs = document.getElementsByTagName('input');
 
@@ -60,7 +85,7 @@ for (var i=0; i<inputs.length; i++) {
 	});
 }
 
-// Form validation email
+// Form validation birthday
 function myValidator() {
   var birthday = document.getElementById("birthdate").value; // Don't get Date yet...
   var regexVar = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/; // add anchors; use literal
@@ -111,8 +136,45 @@ function checkButton() {
       document.getElementById("error").innerHTML   
           = "Veuillez sélectionner une ville";  
           return false 
-  }   
+  }
+  return true;   
 }  
+
+function displayRadioValue() {
+  var ele = document.getElementsByName('location');
+    
+  for(i = 0; i < ele.length; i++) {
+      if(ele[i].checked)
+        return ele[i].value;
+  }
+
+}
+
+function displayCheckbox1Value() {
+  var ele = document.getElementsByName('checkbox1');
+    
+  for(i = 0; i < ele.length; i++) {
+      if(ele[i].checked)
+      return ele[i].value;
+      else {
+        return false
+      }
+  }
+
+}
+
+function displayCheckbox2Value() {
+  var ele = document.getElementsByName('checkbox2');
+    
+  for(i = 0; i < ele.length; i++) {
+      if(ele[i].checked)
+      return ele[i].value;  
+      else {
+        return false
+      }
+  }
+
+}
 
 // Form validation checkbox
 function checkCheckbox() {  
