@@ -77,6 +77,7 @@
                   required="required"
                   title="2 characters minimum"
                 /><div class="validation-msg">Veuillez entrer 2 caractères ou plus</div>
+                <div id="first-error"></div>
                 <br>
               </div>
               <div
@@ -91,6 +92,7 @@
                   required="required"
                   title="2 characters minimum"
                 /><div class="validation-msg">Veuillez entrer 2 caractères ou plus</div>
+                <div id="name-error"></div>
                 <br>
               </div>
               <div
@@ -105,6 +107,7 @@
                   required="required"
                   title="adresse email valide"
                 /><div class="validation-msg">Veuillez entrer une adresse email valide</div>
+                <div id="email-error"></div>
                 <br>
               </div>
               <div
@@ -122,6 +125,7 @@
                   title="dd/mm/yyyy"
                 /><span id="dateErrMsg"></span>
                 <div class="validation-msg">Veuillez entrer une date de naissance valide</div>
+                <div id="birthdate-error"></div>
                 <br>
               </div>
               <div
@@ -136,6 +140,7 @@
                 required="required"
                 title="valeur entre 1 et 10"
                 ><div class="validation-msg">Veuillez entrer une valeur entre 0 et 10</div>
+                <div id="quantity-error"></div>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -244,7 +249,7 @@
                 type="submit"
                 class="button"
                 value="C'est parti"
-                onclick="checkAll(); checkButton(); checkCheckbox();"
+                onclick="checkAll(); isEmptylast(); isEmptyfirst(); isEmptyemail(); isEmptybirthday(); isEmptytournois(); checkButton(); checkCheckbox();"
               />
             </form>
           </div>

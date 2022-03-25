@@ -137,6 +137,13 @@ input:focus {
   font-size: 15px;
 }
 
+#name-error, #first-error, #email-error, #birthdate-error, #quantity-error {
+  position: relative;
+  text-align: right;
+  color: #e54858;
+  font-size: 15px;
+}
+
 .fadeIn {
   opacity: 1;
 }
