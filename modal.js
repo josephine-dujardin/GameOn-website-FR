@@ -86,6 +86,76 @@ for (var i=0; i<inputs.length; i++) {
 	});
 }
 
+// Form validation empty lastname
+function isEmptylast(){
+  var str = document.getElementById("last").value;
+  if( !str.replace(/\s+/, '').length ) {
+    document.getElementById("name-error").innerHTML   
+    = "Ce champ ne doit pas être vide";   
+  return false 
+}   
+else {   
+document.getElementById("name-error").innerHTML   
+  = "";  
+}  
+}
+
+// Form validation empty firstname
+function isEmptyfirst(){
+  var str = document.getElementById("first").value;
+  if( !str.replace(/\s+/, '').length ) {
+    document.getElementById("first-error").innerHTML   
+    = "Ce champ ne doit pas être vide";   
+  return false 
+}   
+else {   
+document.getElementById("first-error").innerHTML   
+  = "";  
+}  
+}
+
+// Form validation empty email
+function isEmptyemail(){
+  var str = document.getElementById("email").value;
+  if( !str.replace(/\s+/, '').length ) {
+    document.getElementById("email-error").innerHTML   
+    = "Ce champ ne doit pas être vide";   
+  return false 
+}   
+else {   
+document.getElementById("email-error").innerHTML   
+  = "";  
+}  
+}
+
+// Form validation empty birthday
+function isEmptybirthday(){
+  var str = document.getElementById("birthdate").value;
+  if( !str.replace(/\s+/, '').length ) {
+    document.getElementById("birthdate-error").innerHTML   
+    = "Ce champ ne doit pas être vide";   
+  return false 
+}   
+else {   
+document.getElementById("birthdate-error").innerHTML   
+  = "";  
+}  
+}
+
+// Form validation empty tournois
+function isEmptytournois(){
+  var str = document.getElementById("quantity").value;
+  if( !str.replace(/\s+/, '').length ) {
+    document.getElementById("quantity-error").innerHTML   
+    = "Ce champ ne doit pas être vide";   
+  return false 
+}   
+else {   
+document.getElementById("quantity-error").innerHTML   
+  = "";  
+}  
+}
+
 // Form validation birthday
 function myValidator() {
   var birthday = document.getElementById("birthdate").value; // Don't get Date yet...
